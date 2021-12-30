@@ -1,0 +1,115 @@
+package com.nadia.frenzy.ui.questionanswer
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.nadia.frenzy.R
+import com.nadia.frenzy.data.*
+import com.nadia.frenzy.databinding.QuestionAnswerLayoutBinding
+import com.nadia.frenzy.utils.Session
+import com.nadia.frenzy.utils.loadImage
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class QuestionAnswerFragment : Fragment(){
+
+    private lateinit var mQuestionAnswer: Answer
+
+    private var _binding : QuestionAnswerLayoutBinding? = null
+    private val binding get() = _binding!!
+
+    private val mQuestionAnswerViewModel by viewModels<QuestionAnswerViewModel>()
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = DataBindingUtil.inflate(inflater, R.layout.question_answer_layout, container, false)
+
+        val token = Session.getHeaderToken(requireContext())
+        val answerId = arguments?.getString(ANSWER_ID).toString()
+        val userId = Session.getUserId(requireContext()).toString()
+
+        setupObservers()
+
+        mQuestionAnswerViewModel.getQuestionAnswer(token, answerId, userId)
+        viewsClickListeners()
+        return binding.root
+    }
+
+    private fun setupObservers() {
+        mQuestionAnswerViewModel.getAnswerLiveData().observe(viewLifecycleOwner, {
+            bindAnswer(it)
+            mQuestionAnswer = it
+        })
+
+        mQuestionAnswerViewModel.messages.observe(viewLifecycleOwner, {
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+        })
+    }
+
+    private fun bindAnswer(answer : Answer){
+        binding.questionUsername.text = answer.toUserName
+        binding.questionText.text = answer.questionBody
+        binding.questionUserAvatar.loadImage(answer.toUserAvatar, R.drawable.ic_profile)
+
+        binding.answerUsername.text = answer.toUserName
+        binding.answerText.text = answer.answerBody
+        binding.answerUserAvatar.loadImage(answer.fromUserAvatar, R.drawable.ic_profile)
+
+        binding.reactionsTxt.text = answer.reactionsNum.toString()
+
+
+        if(answer.isReacted == Reaction.REACATED){
+            binding.reactionsTxt.setTextColor(ContextCompat.getColor(requireContext(), R.color.pink))
+            binding.reactionsTxt.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_reacted,0,0,0)
+        }else{
+            binding.reactionsTxt.setTextColor(ContextCompat.getColor(requireContext() ,R.color.black))
+            binding.reactionsTxt.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_react,0,0,0)
+        }
+    }
+
+    private fun viewsClickListeners(){
+        binding.questionUsername.setOnClickListener {
+            val bundle = bundleOf(USER_ID to mQuestionAnswer.toUserId)
+            findNavController().navigate(R.id.action_questionAnswerFragment_to_peopleFragment, bundle)
+        }
+
+        binding.answerUsername.setOnClickListener{
+            val bundle = bundleOf(USER_ID to mQuestionAnswer.fromUserId)
+            findNavController().navigate(R.id.action_questionAnswerFragment_to_peopleFragment, bundle)
+        }
+
+        binding.reactionsTxt.setOnClickListener{
+            when(mQuestionAnswer.isReacted){
+                Reaction.REACATED -> {
+                    val token = Session.getHeaderToken(requireContext())
+                    val answerId = mQuestionAnswer.answerId.toString()
+                    val toUserId = mQuestionAnswer.toUserId
+                    val fromUserId = mQuestionAnswer.fromUserId
+                    val reactionData = ReactionData(fromUserId, toUserId, answerId)
+                    mQuestionAnswerViewModel.unreactAnswer(token, reactionData)
+                }
+
+                Reaction.UN_REACATED -> {
+                    val token = Session.getHeaderToken(requireContext())
+                    val answerId = mQuestionAnswer.answerId.toString()
+                    val toUserId = mQuestionAnswer.toUserId
+                    val fromUserId = mQuestionAnswer.fromUserId
+                    val reactionData = ReactionData(fromUserId, toUserId, answerId)
+                    mQuestionAnswerViewModel.reactAnswer(token, reactionData)
+                }
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

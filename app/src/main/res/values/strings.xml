@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Frenzy</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="e_email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="login_message">You have account? Login</string>
+    <string name="register_message">No account yet? Create one</string>
+    <string name="home">Home</string>
+    <string name="notifications">Notifications</string>
+    <string name="people">People</string>
+    <string name="post">Post</string>
+    <string name="profile">Profile</string>
+    <string name="question_message" translatable="false">What, when, why... ask</string>
+    <string name="answer_message" translatable="false">Write your answer...</string>
+    <string name="ask">Ask</string>
+    <string name="ask_anonymously">Anonymously</string>
+    <string name="ask_yourself">Ask Yourself</string>
+    <string name="user_wallpaper">User Wallpaper</string>
+    <string name="user_avatar">User Avatar</string>
+    <string name="follow">Follow me</string>
+    <string name="following">Following</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search by mail, name</string>
+    <string name="question_length">300</string>
+    <string name="message">Message Me</string>
+    <string name="logout">logout</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="settings">Settings</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="anonymous_user">Anonymous user</string>
+    <string name="logo">Logo</string>
+
+    <!--Settings-->
+    <string name="change_status">Change Status</string>
+    <string name="change_color">Change Theme</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_location">Change Location</string>
+    <string name="change">Change</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="new_status">New Status</string>
+    <string name="your_location">My Location</string>
+
+    <!--Messages-->
+    <string name="success_update_status">Status updated successfully</string>
+    <string name="success_update_location">Location updated successfully</string>
+    <string name="success_update_color">Color updated successfully</string>
+    <string name="success_update_password">Password updated successfully</string>
+    <string name="success_update_avatar">Avatar updated successfully</string>
+    <string name="success_update_wallpaper">Wallpaper updated successfully</string>
+
+    <!--Errors-->
+    <string name="error_invalid_name">Your name is invalid</string>
+    <string name="error_invalid_username">Your username is invalid</string>
+    <string name="error_invalid_email">Your email is invalid</string>
+    <string name="error_invalid_password">Your password is invalid</string>
+    <string name="error_react">Can\'t react this answer</string>
+    <string name="error_unreact">can\'t un react this question</string>
+    <string name="error_update_status">Error while updating your status</string>
+    <string name="error_update_location">Error while updating your location</string>
+    <string name="error_update_color">Error while updating your color</string>
+    <string name="error_update_password">Error while updating your password</string>
+    <string name="error_get_question_answer">Can\'t get question answer</string>
+    <string name="error_load_user_info">Can\'t load user information</string>
+    <string name="error_update_avatar">Error while updating your avatar</string>
+    <string name="error_update_wallpaper">Error while updating your wallpaper</string>
+    <string name="error_follow">Error while following this user</string>
+    <string name="error_unfollow">Error while unfollowing this user</string>
+</resources>

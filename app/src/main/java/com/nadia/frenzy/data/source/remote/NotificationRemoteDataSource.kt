@@ -1,0 +1,32 @@
+package com.nadia.frenzy.data.source.remote
+
+import com.nadia.frenzy.data.Notification
+import com.nadia.frenzy.data.source.NotificationDataSource
+import com.nadia.frenzy.data.source.remote.service.NotificationService
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import retrofit2.Response
+import javax.inject.Inject
+
+class NotificationRemoteDataSource @Inject constructor(
+    private val notificationService: NotificationService,
+    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+) : NotificationDataSource {
+
+    override suspend fun getUserNotifications(token : String, userId : String, page : Int) : Result<List<Notification>> = withContext(ioDispatcher) {
+        return@withContext try {
+            Result.success(notificationService.getUserNotifications(token, userId, page))
+        } catch (e : Exception) {
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun makeNotificationOpened(token : String, id : String) : Result<Response<String>> = withContext(ioDispatcher) {
+        return@withContext try {
+            Result.success(notificationService.makeNotificationOpened(token, id))
+        } catch (e : Exception) {
+            Result.failure(e)
+        }
+    }
+}

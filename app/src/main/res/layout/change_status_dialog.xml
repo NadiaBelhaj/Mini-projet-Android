@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/statusEdit"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen5dp"
+        android:hint="@string/new_status"
+        android:inputType="text"
+        android:lines="1" />
+
+    <Button
+        android:id="@+id/changeButton"
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="16sp"
+        android:background="@drawable/corner"
+        android:text="@string/change"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>
