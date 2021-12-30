@@ -1,0 +1,2 @@
+# Mini-projet-Android
+Application de mise en relation entre les Gamers. Notre application est dédiée aux amateurs des jeux vidéo.  On vise à accompagner les débutants dans la découverte du monde des jeux vidéo, à aider ceux qui n'ont pas d'amis d'élargir leurs réseaux et trouver avec qui jouer et de créer un espace pour s'amuser, apprendre à jouer et partager d'astuces . L'utilisateur peut choisir son jeu ou il va trouver dans l'espace dédié des joueurs qui sont entrain de jouer afin qu'ils puissent se communiquer, jouer ensemble et faire de nouveaux contacts.
