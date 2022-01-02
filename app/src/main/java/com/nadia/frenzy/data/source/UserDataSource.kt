@@ -24,4 +24,8 @@ interface UserDataSource {
     suspend fun updateUserColor(token : String, colorBody: ColorBody) : Result<Response<String>>
 
     suspend fun updateUserPassword(token : String, passwordBody: PasswordBody) : Result<Response<String>>
+
+    suspend fun updateUserGames(token : String, gamesBody: Game) : Result<Response<String>>
+
+    suspend fun updateUserPlatforms(token : String, platformsBody: Platform) : Result<Response<String>>
 }

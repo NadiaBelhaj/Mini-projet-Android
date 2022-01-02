@@ -98,4 +98,20 @@ class UserRemoteDataSource @Inject constructor(
             Result.failure(e)
         }
     }
+
+    override suspend fun updateUserGames(token: String, gamesBody: Game): Result<Response<String>> = withContext(ioDispatcher) {
+        return@withContext try {
+            Result.success(userService.updateUserGames(token, gamesBody))
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun updateUserPlatforms(token: String, platformsBody: Platform): Result<Response<String>> = withContext(ioDispatcher) {
+        return@withContext try {
+            Result.success(userService.updateUserPlatforms(token, platformsBody))
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
 }

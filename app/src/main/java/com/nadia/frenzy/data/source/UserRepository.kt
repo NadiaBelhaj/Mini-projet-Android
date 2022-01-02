@@ -53,4 +53,12 @@ class UserRepository @Inject constructor(private val userDataSource: UserDataSou
     suspend fun updateUserPassword(token : String, passwordBody: PasswordBody) : Result<Response<String>> {
         return userDataSource.updateUserPassword(token, passwordBody)
     }
+
+    suspend fun updateUserGames(token : String, gamesBody: Game) : Result<Response<String>> {
+        return userDataSource.updateUserGames(token, gamesBody)
+    }
+
+    suspend fun updateUserPlatforms(token : String, platformsBody: Platform) : Result<Response<String>> {
+        return userDataSource.updateUserPlatforms(token, platformsBody)
+    }
 }

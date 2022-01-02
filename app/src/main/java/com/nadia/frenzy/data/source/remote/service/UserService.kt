@@ -64,4 +64,16 @@ interface UserService {
         @Header("authorization") token : String,
         @Body passwordBody: PasswordBody
     ) : Response<String>
+
+    @PUT("users/games")
+    suspend fun updateUserGames(
+        @Header("authorization") token : String,
+        @Body gamesBody: Game
+    ) : Response<String>
+
+    @PUT("users/platforms")
+    suspend fun updateUserPlatforms(
+        @Header("authorization") token : String,
+        @Body platformsBody: Platform
+    ) : Response<String>
 }
