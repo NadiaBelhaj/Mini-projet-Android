@@ -10,4 +10,4 @@ const socketIO = require('socket.io')(server);
 const socketManager = require('./sockets/socket_manager');
 socketManager.startListener(socketIO);
 
-server.listen(port, () => console.debug("Server start at PORT 8000"));
+server.listen(port, () => console.debug("Server start at PORT 3000"));

@@ -85,12 +85,12 @@ exports.createNewQuestion = (req, res) => {
             const questionId = result[1];
             notificationModel.createQuestionNotification(toUser, questionId);
             res.status(status.OK).json({
-                message: "Question created",
+                message: "Question Is created",
             });
         }
         else {
             res.status(status.BAD_REQUEST).json({
-                message: "Question not created",
+                message: "Question Is Not created",
             });
         }
     });
@@ -102,12 +102,12 @@ exports.deleteQuestion = (req, res) => {
     questionModel.deleteQuestion(id).then(state => {
         if (state) {
             res.status(status.OK).json({
-                message: "Question deleted",
+                message: "Question Is deleted",
             });
         }
         else {
             res.status(status.BAD_REQUEST).json({
-                message: "Question not deleted",
+                message: "Question Is Not deleted",
             });
         }
     });

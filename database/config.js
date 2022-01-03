@@ -19,37 +19,37 @@ connection.connect(error => {
     //Create users table
     connection.query(schema.MYSQL_USERS_TABLE, (err, res) =>{
         if (err) throw err;
-        console.log("Users Table Done");
+        console.log("Users Table Is Open");
     });
 
     //Create questions table
     connection.query(schema.MYSQL_QUESTIONS_TABLE, (err, res) =>{
         if (err) throw err;
-        console.log("Questions Table Done");
+        console.log("Questions Table Is Open");
     });
 
     //Create answerd table
     connection.query(schema.MYSQL_ANSWERD_TABLE, (err, res) =>{
         if (err) throw err;
-        console.log("Answerd Table Done");
+        console.log("Answerd Table Is Open");
     });
 
     //Create follows table
     connection.query(schema.MYSQL_FOLLOWS_TABLE, (err, res) =>{
         if (err) throw err;
-        console.log("Follows Table Done");
+        console.log("Follows Table Is Open");
     });
 
     //Create notifications table
     connection.query(schema.MYSQL_NOTIFICATIONS_TABLE, (err, res) =>{
         if (err) throw err;
-        console.log("Notifications Table Done");
+        console.log("Notifications Table Is Open");
     });
 
     //Create reactions table
     connection.query(schema.MYSQL_REACTIONS_TABLE, (err, res) =>{
         if (err) throw err;
-        console.log("Reactions Table Done");
+        console.log("Reactions Table Is Open");
     });
 });
 

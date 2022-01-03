@@ -56,7 +56,7 @@ exports.createNewReaction = (req, res) => {
         }
         else {
             res.status(status.BAD_REQUEST).json({
-                message: "Reaction not Created",
+                message: "Reaction Is Not Created",
             });
         }
     });
@@ -71,12 +71,12 @@ exports.deleteReaction = (req, res) => {
     reactModel.deleteReaction(args).then(state => {
         if (state) {
             res.status(status.OK).json({
-                message: "Reaction is deleted",
+                message: "Reaction Is deleted",
             });
         }
         else {
             res.status(status.BAD_REQUEST).json({
-                message: "Reaction not deleted",
+                message: "Reaction Is Not deleted",
             });
         }
     });

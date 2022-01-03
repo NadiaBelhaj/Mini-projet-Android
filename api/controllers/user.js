@@ -52,7 +52,7 @@ exports.registerNewUser = (req, res) => {
                     if (result[0]) {
                         res.status(status.OK).json(result[1]);
                     } else {
-                        res.status(status.BAD_REQUEST).send("Invalid Register");
+                        res.status(status.BAD_REQUEST).send("Invalid Registration");
                     }
                 });
             });
@@ -61,7 +61,7 @@ exports.registerNewUser = (req, res) => {
             if (current == email) {
                 return res.status(status.BAD_REQUEST).send("Invalid Email");
             } else {
-                return res.status(status.BAD_REQUEST).send("Invalid username")
+                return res.status(status.BAD_REQUEST).send("Invalid Username")
             }
         }
     });
@@ -138,7 +138,7 @@ exports.deleteAllUsers = (req, res) => {
     userModel.deleteUsers().then(state => {
         if (state) {
             res.status(status.OK).json({
-                message: "All is deleted",
+                message: "All Is deleted",
             });
         } else {
             res.status(status.BAD_REQUEST).json({
@@ -157,7 +157,7 @@ exports.deleteOneUser = (req, res) => {
             });
         } else {
             res.status(status.BAD_REQUEST).json({
-                message: "Can't Delete User"
+                message: "Can't Delete The User"
             });
         }
     })
@@ -177,11 +177,11 @@ exports.deleteUserAvatar = (req, res) => {
         userModel.deleteUserAvatar(email).then(state => {
             if (state) {
                 res.status(status.OK).json({
-                    message: "Avatar Deleted",
+                    message: "Avatar Is Deleted",
                 });
             } else {
                 res.status(status.BAD_REQUEST).json({
-                    message: "Can't Delete Avatar"
+                    message: "Can't Delete The Avatar"
                 });
             }
         })
@@ -201,11 +201,11 @@ exports.deleteUserWallpaper = (req, res) => {
         userModel.deleteUserWallpaper(email).then(state => {
             if (state) {
                 res.status(status.OK).json({
-                    message: "Wallpaper Deleted",
+                    message: "Wallpaper Is Deleted",
                 });
             } else {
                 res.status(status.BAD_REQUEST).json({
-                    message: "Can't Delete Wallpaper"
+                    message: "Can't Delete The Wallpaper"
                 });
             }
         });
@@ -218,11 +218,11 @@ exports.deleteUserStatus = (req, res) => {
     userModel.deleteUserStatus(email).then(state => {
         if (state) {
             res.status(status.OK).json({
-                message: "Status Deleted",
+                message: "Status Is Deleted",
             });
         } else {
             res.status(status.BAD_REQUEST).json({
-                message: "Can't Delete Status"
+                message: "Can't Delete The Status"
             });
         }
     });
