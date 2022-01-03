@@ -4,7 +4,6 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.nadia.frenzy.ui.game.DetailGameActivity
 import com.nadia.frenzy.R
 import com.nadia.frenzy.data.*
 

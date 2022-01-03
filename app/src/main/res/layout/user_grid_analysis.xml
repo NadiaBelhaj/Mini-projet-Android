@@ -3,9 +3,9 @@
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="60dp"
-        android:columnCount="5"
+        android:columnCount="7"
         android:layout_marginLeft="11dp"
         android:layout_marginRight="11dp">
 
@@ -172,5 +172,72 @@
                     tools:text="10" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            app:cardElevation="@dimen/dimen2dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/gamesIc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/dimen1dp"
+                    android:src="@drawable/ic_games" />
+
+                <TextView
+                    android:id="@+id/userGames"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gamesIc"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    tools:text="10" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center"
+            app:cardElevation="@dimen/dimen2dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/platformsIc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/dimen1dp"
+                    android:src="@drawable/ic_platforms" />
+
+                <TextView
+                    android:id="@+id/userPlatforms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/platformsIc"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    tools:text="10" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
     </GridLayout>
 </layout>

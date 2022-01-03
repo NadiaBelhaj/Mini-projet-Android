@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 enum class Action{
     @SerializedName("normal")
-    NOTMAL,
+    NORMAL,
 
     @SerializedName("follow")
     FOLLOW,

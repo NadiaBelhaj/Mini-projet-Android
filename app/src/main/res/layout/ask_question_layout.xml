@@ -48,7 +48,7 @@
     <com.google.android.material.textfield.TextInputEditText
         android:layout_weight="5"
         android:id="@+id/questionEditText"
-        android:layout_width="370dp"
+        android:layout_width="360dp"
         android:maxLength="300"
         android:hint="@string/question_message"
         android:textColor="@color/darkBlue"

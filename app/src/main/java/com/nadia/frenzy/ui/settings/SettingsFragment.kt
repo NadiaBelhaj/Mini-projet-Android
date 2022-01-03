@@ -12,10 +12,16 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBindings
 import com.nadia.frenzy.R
+import com.nadia.frenzy.data.Game
 import com.nadia.frenzy.data.themeList
 import com.nadia.frenzy.databinding.FragmentSettingsBinding
 import com.nadia.frenzy.ui.adapter.ColorGridAdapter
+import com.nadia.frenzy.ui.game.GameActivity
+import com.nadia.frenzy.ui.game.GameAdapter
 import com.nadia.frenzy.utils.Session
 import com.nadia.frenzy.utils.Validation
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,11 +29,11 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class SettingsFragment : Fragment() {
 
+
     private var _binding : FragmentSettingsBinding? = null
     private val binding get() = _binding!!
 
     private val viewModel by viewModels<SettingsViewModel>()
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_settings, container, false)
 
@@ -170,6 +176,7 @@ class SettingsFragment : Fragment() {
 
         dialogBuilder.show()
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

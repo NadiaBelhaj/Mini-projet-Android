@@ -14,7 +14,8 @@
             android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="201dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
             android:contentDescription="@string/logo"
             android:src="@drawable/ic_logo_frenzy" />
 
