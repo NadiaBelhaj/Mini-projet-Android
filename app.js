@@ -32,6 +32,15 @@ const followRoutes = require('./api/routes/follow');
 const reactRoutes = require('./api/routes/react');
 const notificationRoutes = require('./api/routes/notification');
 
+//Get All Users: http://localhost:3000/v1/users
+//Get User by Id: http://localhost:3000/v1/users/:id (path variables (value=id))
+//Get Search user: http://localhost:3000/v1/users/search (key=q , value(email))
+//Post Login: http://localhost:3000/v1/users/login (email,password)
+//Post Register: http://localhost:3000/v1/users/register (email,username,password,name)
+//Put Change Name: http://localhost:3000/v1/users/name (Bearer token) (name, email)
+//Delete User: http://localhost:3000/v1/users/ (Bearer token) (email)
+
+
 //Bind routers
 app.use(API_VERSION + 'users', userRoutes);
 app.use(API_VERSION + 'feeds', feedRoutes);
