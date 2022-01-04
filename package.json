@@ -5,12 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=prod node src/server.js"
   },
   "keywords": [
     "node",
     "restfull",
-    "api"
+    "api",
+    "NodeJs",
+    "Express",
+    "MySQL"
   ],
   "author": "Nadia",
   "license": "MIT",
