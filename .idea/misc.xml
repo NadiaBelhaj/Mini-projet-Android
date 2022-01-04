@@ -44,10 +44,10 @@
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/drawable/ic_time.xml" value="0.10277777777777777" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/drawable/ic_wallpaper.xml" value="0.10277777777777777" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/activity_game.xml" value="0.1515625" />
-        <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/activity_game_detail.xml" value="0.1515625" />
+        <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/activity_game_detail.xml" value="0.22" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/activity_main.xml" value="0.10371376811594203" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/activity_platform.xml" value="0.1515625" />
-        <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/activity_platform_detail.xml" value="0.1515625" />
+        <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/activity_platform_detail.xml" value="0.22" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/answer_question_layout.xml" value="0.25" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/ask_question_layout.xml" value="0.18" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/change_color_dialog.xml" value="0.2" />
@@ -63,7 +63,7 @@
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/fragment_settings.xml" value="0.18" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/fragment_splash.xml" value="0.1" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/fullscreen_layout.xml" value="0.10371376811594203" />
-        <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/game_single_item.xml" value="0.1515625" />
+        <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/game_single_item.xml" value="0.33" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/games_list_item.xml" value="0.1515625" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/list_layout.xml" value="0.22" />
         <entry key="..\:/Users/Admin/OneDrive/Bureau/Frenzy/Android/app/src/main/res/layout/notification_list_item.xml" value="0.25" />

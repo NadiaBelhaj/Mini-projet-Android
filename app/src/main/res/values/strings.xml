@@ -42,6 +42,8 @@
     <string name="games">Games</string>
     <string name="platforms">Platforms</string>
     <string name="change">Change</string>
+    <string name="game_button">Add To My Games</string>
+    <string name="platform_button">Add To My Platforms</string>
     <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
     <string name="new_status">New Status</string>

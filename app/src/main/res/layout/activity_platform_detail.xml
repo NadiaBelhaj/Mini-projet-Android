@@ -35,5 +35,18 @@
         android:textColor="@color/darkBlue"
         android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/platformButton"
+            android:layout_gravity="center"
+            android:text="@string/platform_button"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:textSize="16sp"
+            android:background="@drawable/corner"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 </layout>
