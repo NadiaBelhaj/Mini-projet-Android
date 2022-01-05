@@ -20,3 +20,6 @@ interface AnswerService {
         @Body answerData: AnswerData
     ): Response<String>
 }
+
+/*Retrofit 2 Custom Error Response Handling Usually, when using Retrofit 2,
+we have two callback listeners: onResponse and onFailure*/

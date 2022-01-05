@@ -1,5 +1,10 @@
 package com.nadia.frenzy.ui.settings
 
+
+//LiveData is a data holder class that can be observed within a given lifecycle.
+/*A CoroutineScope keeps track of all coroutines it creates. Therefore, if we cancel a scope, we cancel
+ all coroutines it created. This is particularly important if you’re running coroutines in a ViewModel.*/
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

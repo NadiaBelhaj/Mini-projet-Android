@@ -1,5 +1,12 @@
 package com.nadia.frenzy.utils
 
+//Widget refers to the elements of the UI (User Interface) that helps user interacts with the Android App.
+// TextView is one of many such widgets which can be used to improve the UI of the app.
+/*Context It allows access to application-specific resources and classes, as well as up-calls for
+application-level operations such as launching activities, broadcasting and receiving intents, etc.*/
+//ContextCompat Helper for accessing features in Context.
+//picasso simplifies the process of displaying images from internal storage or from an external URL.
+
 import android.content.Context
 import android.view.View
 import android.widget.ImageView

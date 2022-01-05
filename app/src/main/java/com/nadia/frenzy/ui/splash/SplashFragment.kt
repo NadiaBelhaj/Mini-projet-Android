@@ -1,5 +1,9 @@
 package com.nadia.frenzy.ui.splash
 
+//provides a means to convert a res/layout/*.xml file defining
+// a view into an actual View object usable in your application source code*/
+
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

@@ -1,5 +1,12 @@
 package com.nadia.frenzy.data.source.remote
 
+
+// Coroutines are programs that allow for cooperative multitasking.
+//coroutine has an associated CoroutineContext, which is an indexed set of Elements.
+/*CoroutineDispatcher it is responsible for determining the execution thread (or threads) of the coroutine.
+When Kotlin executes a coroutine, it first checks if CoroutineDispatcher#isDispatchNeeded returns true or not.
+If yes, then CoroutineDispatcher#dispatchassigns the execution thread*/
+
 import com.nadia.frenzy.data.Answer
 import com.nadia.frenzy.data.AnswerData
 import com.nadia.frenzy.data.source.AnswerDataSource

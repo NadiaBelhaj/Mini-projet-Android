@@ -18,4 +18,5 @@ interface AuthService {
     @Headers("content-type: application/json")
     suspend fun register(@Body body: RegisterData): Response<SessionData>
 
+    //@Body to pass the needed model to the API.
 }

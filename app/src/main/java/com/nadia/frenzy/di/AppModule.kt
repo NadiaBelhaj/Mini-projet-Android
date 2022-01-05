@@ -1,5 +1,15 @@
 package com.nadia.frenzy.di
 
+/*dagger.Provides
+@Module and @Provides: define classes and methods which provide dependencies
+Hilt is a dependency injection library for Android that reduces the boilerplate of doing manual
+dependency injection in your project*/
+
+/*Retrofit makes it easy to parse API response and use it in your application. It has built-in GSON converter
+that can automatically parse HTTP response into an Object or any other types in Java that can be used in your
+code. The problem is if we have custom response, it can't parse using the built-in converter.
+The solution is defining a custom factory converter according to the response format. */
+
 import com.nadia.frenzy.data.SERVER_API_URL
 import com.nadia.frenzy.data.source.*
 import com.nadia.frenzy.data.source.remote.*

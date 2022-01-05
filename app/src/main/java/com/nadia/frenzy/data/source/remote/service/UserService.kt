@@ -1,5 +1,10 @@
 package com.nadia.frenzy.data.source.remote.service
 
+
+//Send Parameters And Multiple Media Content Use MultipartBody.
+// okhttp3.FormBody is used to send string parameters.
+// okhttp3.RequestBody is used to send multiple media content such as file and json string.
+
 import com.nadia.frenzy.data.*
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

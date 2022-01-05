@@ -5,6 +5,8 @@ import com.nadia.frenzy.data.AnswerData
 import retrofit2.Response
 import javax.inject.Inject
 
+//Dependency injection make it easy to refactor, reuse and test the code
+
 class AnswerRepository @Inject constructor(private val answerDataSource: AnswerDataSource) {
 
     suspend fun getQuestionAnswer(token : String, id : String, userId : String) : Result<Answer> {

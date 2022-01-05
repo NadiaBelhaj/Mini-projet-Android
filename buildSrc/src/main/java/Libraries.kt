@@ -31,6 +31,9 @@ object Libraries {
 
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:${Versions.leakCanary}"
+    /*a memory leak detection library for Android. LeakCanary's knowledge of the internals of the
+    Android Framework gives it a unique ability to narrow down the cause of each leak, helping developers
+    dramatically reduce OutOfMemoryError crashes*/
 
     const val junit = "junit:junit:${Versions.junit}"
     const val junitExt = "androidx.test.ext:junit:${Versions.junitExt}"

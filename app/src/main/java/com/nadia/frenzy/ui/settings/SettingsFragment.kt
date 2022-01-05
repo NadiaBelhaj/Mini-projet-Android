@@ -26,6 +26,9 @@ import com.nadia.frenzy.utils.Session
 import com.nadia.frenzy.utils.Validation
 import dagger.hilt.android.AndroidEntryPoint
 
+/*Utility class to create ViewDataBinding from layouts. bind UI components in our layouts to data
+sources in our app using a declarative format */
+
 @AndroidEntryPoint
 class SettingsFragment : Fragment() {
 

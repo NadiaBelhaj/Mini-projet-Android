@@ -138,6 +138,8 @@
                 android:id="@+id/analysisCardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
                 app:cardCornerRadius="@dimen/dimen5dp"
                 app:cardElevation="@dimen/dimen2dp"
                 app:cardUseCompatPadding="true">
